@@ -1,5 +1,5 @@
 import clsx from "clsx"; // import of the clsx function
-import { HTMLAttributes } from "react"; // import HTMLAttributes
+import { FC, HTMLAttributes } from "react"; // import HTMLAttributes
 import { BiMenuAltLeft } from "react-icons/bi"; // import the menu icon
 
 /**
@@ -9,7 +9,7 @@ import { BiMenuAltLeft } from "react-icons/bi"; // import the menu icon
  */
 export type HeaderComponentProps = HTMLAttributes<HTMLDivElement> & { /** additional attributes */ };
 
-function HeaderComponent(props: HeaderComponentProps) {
+const HeaderComponent: FC<HeaderComponentProps> = (props) => {
     const { className, ...restProps } = props;
     return <div className={clsx([className, "flex"])} {...restProps}>
         <BiMenuAltLeft className="text-4xl" />
@@ -20,5 +20,7 @@ function HeaderComponent(props: HeaderComponentProps) {
         </div>
     </div>
 }
+
+HeaderComponent.displayName = 'HeaderComponent';
 
 export default HeaderComponent;
