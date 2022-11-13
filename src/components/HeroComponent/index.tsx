@@ -10,7 +10,7 @@ const HeroComponent: FC<HeroComponentProps> = (props) => {
 
     const btnClickHandler = useCallback(() => {
         if (process.env.REACT_APP_TRY_FOR_FREE_URL) {
-            window.open(process.env.REACT_APP_TRY_FOR_FREE_URL);
+            window.open(process.env.REACT_APP_TRY_FOR_FREE_URL, '_self');
         }
     }, [])
 
