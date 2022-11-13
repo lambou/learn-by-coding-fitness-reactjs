@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply text-gray-800;
+  @apply text-gray-800 bg-slate-100;
   margin: 0;
   font-family: 'Raleway', sans-serif;
 }
