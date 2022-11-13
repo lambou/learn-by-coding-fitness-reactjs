@@ -7,7 +7,7 @@ export type FooterComponentProps = HTMLAttributes<HTMLDivElement> & { /** additi
 
 const FooterComponent: FC<FooterComponentProps> = (props) => {
     const { className, ...restProps } = props;
-    return <div className={clsx([className, "flex justify-between gap-8"])} {...restProps}>
+    return <div className={clsx([className, "flex justify-between flex-col sm:flex-row gap-8"])} {...restProps}>
         <InfoCard
             icon={<BsCalendar2Date className="text-yellow-500" />}
             cardTitle={"Daily workouts 7 days a week"}

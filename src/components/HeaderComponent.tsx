@@ -13,7 +13,7 @@ const HeaderComponent: FC<HeaderComponentProps> = (props) => {
     const { className, ...restProps } = props;
     return <div className={clsx([className, "flex"])} {...restProps}>
         <BiMenuAltLeft className="text-4xl" />
-        <div className="flex-grow flex-shrink basis-auto inline-flex items-center justify-end gap-6 font-semibold text-gray-500">
+        <div className="flex-grow flex-shrink basis-auto hidden sm:inline-flex items-center justify-end gap-6 font-semibold text-gray-500">
             <span className="capitalize">Workouts & programs</span>
             <span className="capitalize">Nutrition plans</span>
             <span className="capitalize">Community</span>

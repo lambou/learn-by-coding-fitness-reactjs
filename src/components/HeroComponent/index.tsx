@@ -14,8 +14,8 @@ const HeroComponent: FC<HeroComponentProps> = (props) => {
         }
     }, [])
 
-    return <div className={clsx([className, "flex items-center gap-8 py-8"])} {...restProps}>
-        <div className="flex flex-col items-start gap-6 max-w-sm">
+    return <div className={clsx([className, "flex items-center flex-wrap-reverse sm:flex-nowrap gap-16 sm:gap-8 py-8"])} {...restProps}>
+        <div className="flex flex-col items-center sm:items-start gap-6 max-w-sm text-center sm:text-left">
             <h1 className="capitalize font-extrabold text-5xl">It's time to regain your fitness</h1>
             <p className="text-gray-500 text-base">Do fitness anywhere and anytime with our training videos.</p>
             <LargeButton type="button" onClick={btnClickHandler}>Try it for free</LargeButton>
